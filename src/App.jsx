@@ -15,6 +15,8 @@ import {
 	Navigation,
 	Clients,
 } from "./components";
+import StartsCanvas from "./components/StartsCanvas";
+import StarsCanvas from "./components/StartsCanvas";
 const App = () => (
 	<div className="bg-primary w-full overflow-hidden">
 		<div className={`${styles.paddingX} ${styles.flexCenter}`}>
@@ -30,17 +32,18 @@ const App = () => (
 		</div>
 
 		<div className={`${styles.paddingX} ${styles.flexCenter}`}>
-			<div className={`${styles.boxWidth}`}>
+			<div className={`${styles.boxWidth} relative`}>
 				<Stats />
 				<Business />
 				<Billing />
-				<Project />
-				<About />
+				{/* <Project /> */}
+				{/* <About /> */}
 				<Testimonials />
 				{/* <Clients /> */}
 				<Team />
 				<CTA />
 				<Contact />
+				<div className="relative z-0">{/* <StarsCanvas /> */}</div>
 				<Footer />
 			</div>
 		</div>

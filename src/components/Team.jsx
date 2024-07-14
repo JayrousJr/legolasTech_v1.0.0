@@ -38,7 +38,10 @@ const Team = () => {
 		return controls?.stop;
 	}, [xTranslation, width, duration, rerender]);
 	return (
-		<section className={`flex flex-col gap-5 px-12 ${styles.padding}`}>
+		<section
+			className={`flex flex-col gap-5 px-12 ${styles.padding}`}
+			id="team"
+		>
 			<h2 className={styles.heading2}>Team</h2>
 			<p className={`${styles.paragraph} max-w-[470px] my-6`}>
 				Meet our Team, ready to serve you with great Tech services, and make

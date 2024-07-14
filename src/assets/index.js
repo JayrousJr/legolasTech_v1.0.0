@@ -7,7 +7,7 @@ import bry from "./team/bry.webp";
 import boniface from "./team/boniface.webp";
 import edrick from "./team/edrick.webp";
 import erick from "./team/erick.webp";
-import rose from "./team/default.jpg";
+import rose from "./team/rose.png";
 // Logo
 import logo from "./logo.png";
 // images in
