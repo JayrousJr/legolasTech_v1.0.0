@@ -18,14 +18,14 @@ import {
 import StartsCanvas from "./components/StartsCanvas";
 import StarsCanvas from "./components/StartsCanvas";
 const App = () => (
-	<div className="bg-primary w-full overflow-hidden">
+	<div className="bg-primary relative w-full overflow-hidden">
 		<div className={`${styles.paddingX} ${styles.flexCenter}`}>
 			<div className={`${styles.boxWidth}`}>
 				<Navigation />
 			</div>
 		</div>
 
-		<div className={`${styles.flexStart} `}>
+		<div className={`${styles.flexStart}`}>
 			<div className={`${styles.boxWidth}`}>
 				<Hero />
 			</div>

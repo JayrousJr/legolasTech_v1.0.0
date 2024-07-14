@@ -48,8 +48,8 @@ const Hero = () => (
 			<Circles />
 			<CirlceSm />
 			<div className="absolute z-[0] w-[40%] h-[35%] pink__gradient top-0"></div>
-			<div className="absolute z-[1] w-[80%] h-[80%] white__gradient bottom-20 rounded-full"></div>
-			<div className="absolute z-[0] w-[80%] h-[80%] blue__gradient right-20 bottom-20"></div>
+			<div className="absolute z-[1] w-[50%] h-[50%] white__gradient bottom-20 rounded-full"></div>
+			<div className="absolute z-[0] w-[50%] h-[50%] blue__gradient right-20 bottom-20"></div>
 		</div>
 		<div className={`ss:hidden ${styles.flexCenter}`}>
 			<Getstarted />
