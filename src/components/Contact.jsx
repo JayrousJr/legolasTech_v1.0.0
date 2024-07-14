@@ -108,7 +108,9 @@ const Contact = () => {
 							placeholder="Enter your complimenting Message"
 							label="Message"
 						/>
-						<Button />
+						<Button
+							label={submitting ? "Sending Message ..." : "Send Message"}
+						/>
 					</form>
 				</div>
 			</div>
