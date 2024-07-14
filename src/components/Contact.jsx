@@ -5,6 +5,7 @@ import Forminput from "./Forminput";
 import TextArea from "./TextArea";
 import Button from "./Button";
 import { handleSubmitMEssage } from "../service";
+import emailjs from "@emailjs/browser";
 const Contact = () => {
 	const formRef = useRef();
 	const [submitting, setSubmitting] = useState(false);
@@ -21,16 +22,40 @@ const Contact = () => {
 	};
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-
-		try {
-			setSubmitting(true);
-			await handleSubmitMEssage(form);
-		} catch (error) {
-			// setErrors(error);
-			console.log(error);
-		} finally {
-			setSubmitting(false);
-		}
+		setSubmitting(true);
+		emailjs
+			.send(
+				"service_bwg5h9q",
+				"template_t6w3mhb",
+				{
+					from_name: form.name,
+					from_email: form.email,
+					subject: form.subject,
+					to_name: "Legolas Technologies",
+					to_email: "info@legolas.tech",
+					message: form.message,
+				},
+				"zAW17snC4RexDAgWv"
+			)
+			.then(
+				() => {
+					setSubmitting(false);
+					alert(
+						"Thank you for contacting Legolas Technologies, We gonna get back to you so soon."
+					);
+					setForm({
+						name: "",
+						email: "",
+						subject: "",
+						message: "",
+					});
+				},
+				(error) => {
+					setSubmitting(false);
+					console.log(error);
+					alert("Sorry! Something went wrong.");
+				}
+			);
 	};
 	return (
 		<section id="contact" className={`${layout.sectionReverse} items-start`}>
